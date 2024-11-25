@@ -5,7 +5,7 @@ import { StockQuote } from "@/types/stock";
 import StockSearch from "./stock-search";
 import StockCard from "./stock-card";
 
-export const StockContainer = () => {
+const StockContainer = () => {
   const [data, setData] = useState<StockQuote | null>(null);
 
   return (
@@ -15,3 +15,5 @@ export const StockContainer = () => {
     </div>
   );
 };
+
+export default StockContainer;

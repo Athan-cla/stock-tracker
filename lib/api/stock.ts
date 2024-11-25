@@ -1,9 +1,9 @@
 import { StockQuote, StockQuoteResponse } from "@/types/stock";
 
 const BASE_URL = "https://www.alphavantage.co/query";
-const API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
 
 export async function getStockData(symbol: string): Promise<StockQuote> {
+  const API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
   if (!API_KEY) {
     throw new Error("API key is not configured");
   }
